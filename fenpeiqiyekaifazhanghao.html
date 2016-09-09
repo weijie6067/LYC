@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企业账号管理</title>
+<link href="css/index.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+<nav class="leftsidebar_box">
+    <dl class="nav_qiy navhover">
+      <dt>企业账号管理<img src="images/nav_s.png"></dt>
+      <dd class="first_dd"><a href="guanliqiyezhanghao.html" target="_parent"> 管理企业账号</a></dd>
+      <dd><a href="guanliqiyekaifazhanghao.html" target="_parent"  class="hover">管理企业开发账号</a></dd>
+      <dd><a href="hetong_jiankeyun.html" target="_parent">合同管理</a></dd>
+      <dd><a href="goumai_jiankeyunkechengpingtai.html" target="_parent">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_pingt ">
+      <dt>平台数据与设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="pingtaikechengbaobiao.html" target="_parent">平台课程报表</a></dd>
+      <dd><a href="xuexihuodongbaobiao.html" target="_parent">学习活动报表</a></dd>
+      <dd><a href="mubanshiyongpinlv.html" target="_parent">模板使用频率</a></dd>
+      <dd><a href="pingtaiquanxianshezhi.html" target="_parent">平台权限设置</a></dd>
+	  <dd><a href="xuexineirongleixingshezhi.html" target="_parent">学习内容类型设置</a></dd>
+      <dd><a href="shiyongzhanghaoquanxianshezhi.html" target="_parent">试用账号权限设置</a></dd>
+    </dl>
+	<dl class="nav_mub">
+      <dt>模板管理<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="zhishiditumuban.html" target="_parent"> 知识地图模板</a></dd>
+      <dd><a href="xuexihuodongmuban.html" target="_parent">学习活动模板</a></dd>
+      <dd><a href="neirongyanshiwendang.html" target="_parent">演示文档模板</a></dd>
+      <dd><a href="jiangshishouce.html" target="_parent">教学手册模板</a></dd>
+	  </dl>
+	<dl class="nav_tongz">
+      <dt>通知与公告<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="chakantongzhi.html" target="_parent">查看通知/公告 </a></dd>
+      <dd><a href="fabutongzhi.html" target="_parent" target="_parent">发布通知/公告</a></dd>
+    </dl>
+	<dl class="nav_xuanc">
+      <dt>宣传网站设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="yingyonganlishezhi.html" target="_parent">应用案例设置</a></dd>
+    </dl>
+	
+<script>
+$(function(){
+	$(".leftsidebar_box dt").css({"background-color":"hite"});
+	$(".navhover dt img").attr("src","images/nav_x.jpg");
+	
+	$(".leftsidebar_box dd").hide();
+	$(".navhover dt").addClass("menu_ac");
+	$(".navhover dd").show();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").removeClass("menu_ac");
+		$(this).addClass("menu_ac");
+		$(".navhover dd").hide();
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+		$(this).parent().find('img').attr("src","images/nav_x.jpg");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+  </nav>
+  <article class="a_zhu">
+	<p ><a href="guanliqiyekaifazhanghao.html"   class="a_active">管理企业开发账号</a><a href="fenpeiqiyekaifazhanghao.html">分配企业开发账号</a><button>查询</button><input placeholder="   请输入搜索名称   "/></p>
+	
+	<ul class="a_fenpeiqykfzh">
+		<li>
+			<div class="fenpeixx">
+				<ul>
+					<li class="alis"><span>2016:08:08<span><span>广州某某有限公司<span></li>
+					<li><span>购买账号个数：5个 <span><span> 购买年长：2年<span></li>
+					<li><span>续费账号：ID001<span><span>续费年长：2年<span></li>
+					 <li><span>续费账号：ID002<span><span>续费年长：2年<span></li>
+				</ul>
+			</div>
+			<div class="fenpeia">
+				<a href="#">确 定</a>
+			</div>
+		</li>
+		
+	</ul>
+	<ul class="a_fenpeiqykfzh">
+		<li>
+			<div class="fenpeixx">
+				<ul>
+					<li class="alis"><span>2016:08:08<span><span>广州某某有限公司<span></li>
+					<li><span>购买账号个数：5个 <span><span> 购买年长：2年<span></li>
+					<li><span>续费账号：ID001<span><span>续费年长：2年<span></li>
+					 <li><span>续费账号：ID002<span><span>续费年长：2年<span></li>
+				</ul>
+			</div>
+			<div class="fenpeia">
+				<a href="#">确 定</a>
+			</div>
+		</li>
+		
+	</ul>
+	<ul class="a_fenpeiqykfzh">
+		<li>
+			<div class="fenpeixx">
+				<ul>
+					<li class="alis"><span>2016:08:08<span><span>广州某某有限公司<span></li>
+					<li><span>购买账号个数：5个 <span><span> 购买年长：2年<span></li>
+					<li><span>续费账号：ID001<span><span>续费年长：2年<span></li>
+					 <li><span>续费账号：ID002<span><span>续费年长：2年<span></li>
+				</ul>
+			</div>
+			<div class="fenpeia">
+				<a href="#">确 定</a>
+			</div>
+		</li>
+		
+	</ul>
+	<ul class="a_fenpeiqykfzh">
+		<li>
+			<div class="fenpeixx">
+				<ul>
+					<li class="alis"><span>2016:08:08<span><span>广州某某有限公司<span></li>
+					<li><span>购买账号个数：5个 <span><span> 购买年长：2年<span></li>
+					<li><span>续费账号：ID001<span><span>续费年长：2年<span></li>
+					 <li><span>续费账号：ID002<span><span>续费年长：2年<span></li>
+				</ul>
+			</div>
+			<div class="fenpeia">
+				<a href="#">确 定</a>
+			</div>
+		</li>
+		
+	</ul>
+	<a class="jiazai">加载更多</a>
+	
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

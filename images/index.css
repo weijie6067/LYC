@@ -1,0 +1,59 @@
+body{margin:0;padding:0;overflow-x:hidden;}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';font-size:12px;color: #666666;}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+
+/* header开始*/
+.header{
+    width: 1200px;
+    margin: 0 auto;
+    height: 95px;
+}
+.header img{
+    float: left;
+    height: 55px;
+}
+.header>p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.header span{}
+.header span:nth-child(1){}
+.header span:nth-child(2){}
+/* nav开始*/
+.container{width:100%;height:100%;margin:auto;}
+.container .nav_qiy dt{
+    background-image: url(images/qiy.jpg);
+}
+.container .nav_pingt dt{
+    background-image: url(images/pingt.jpg);
+}
+.container .nav_mub dt{
+    background-image: url(images/mub.jpg);
+}
+.container .nav_tongz dt{
+    background-image: url(images/tongz.jpg);
+}
+.container .nav_xuanc dt{
+    background-image: url(images/xuanc.jpg);
+}
+dt.menu_ac{color:white;}
+.leftsidebar_box{width: 197px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;}
+.line{height:2px;width:100%;background-image:url(images/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left: 50px;padding-right: 25px;background-repeat:no-repeat;background-position:10px center;color: #666666;font-size:14px;position:relative;line-height:48px;cursor:pointer;width: 122px;height: 50px;}
+.leftsidebar_box dd{padding-left:40px;height: 40px;}
+.leftsidebar_box dd a{line-height: 40px;}
+.leftsidebar_box dd a:hover{color:#00B151}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(images/system.png)}
+.custom dt{background-image:url(images/custom.png)}
+.channel dt{background-image:url(images/channel.png)}
+.app dt{background-image:url(images/app.png)}
+.cloud dt{background-image:url(images/cloud.png)}
+.syetem_management dt{background-image:url(images/syetem_management.png)}
+.source dt{background-image:url(images/source.png)}
+.statistics dt{background-image:url(images/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+/* nav结束*/

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企业账号管理</title>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+  <nav class="leftsidebar_box">
+    <dl class="nav_qiy">
+      <dt>企业账号管理<img src="images/nav_x.png"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_pingt">
+      <dt>平台数据与设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_mub">
+      <dt>模板管理<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_tongz">
+      <dt>通知与公告<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_xuanc">
+      <dt>宣传网站设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".leftsidebar_box dt").css({"background-color":"hite"});
+	$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+	$(".leftsidebar_box dd").hide();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").removeClass("menu_ac");
+		$(this).addClass("menu_ac");
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+		$(this).parent().find('img').attr("src","images/nav_x.jpg");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+  </nav>
+  <article class="a_zhu">
+	<p ><a href="javascript::">简课云课程平台</a><a href="javascript::">私有云课程平台</a><a href="javascript::"   class="a_active">企业内部课程平台</a></p>
+	<div class="a_siyouy">
+		<span>本地服务器安装：<input style="
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    margin-top: 20px;
+">万元</span><br>
+		<span>开发账号个数：<input style="
+    margin: 10px;
+"></span>     <span>开发账号费用：<input></span><br>
+<span style="
+">系统升级费用：<input style="
+    margin: 10px;
+"> </span>
+
+	</div>
+	
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

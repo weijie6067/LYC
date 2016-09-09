@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同管理</title>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/list.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+  <iframe src="nav.html" width="197" height="600" frameborder="0"></iframe>
+  <article class="a_zhu">
+	<div class="a_xinzengcght yingyongal"><a href="#" class="cd-popup-trigger3">新增案例</a></div>
+
+<!--弹框-->
+
+	<div class="cd-popup3">
+    <div class="cd-popup-container3">
+        <div class="contou">新增案例 <a href="#0" class="cd-popup-close"></a></div>
+        
+            <ul class="xinzzh xinzal">
+				<li style="line-height: 40px; height: 40px;">公司名称：<textarea rows="2" cols="30"></textarea></li>
+				<li>公司简介：<textarea rows="4" cols="30"></textarea></li>
+				<li>评价部门：<textarea rows="4" cols="30"></textarea></li>
+				<li>评价内容：<textarea rows="4" cols="30"></textarea></li>
+				<li><a class="anniu">企业logo</a></li>
+			</ul>
+        
+        <div class="quexiao"><a href="#0" class="close">确认</a></div>
+    </div>
+	
+</div>
+	<script type="text/javascript">
+    /*弹框JS内容*/
+    jQuery(document).ready(
+	function($){
+        //打开窗口
+        $('.cd-popup-trigger3').on('click', function(event){
+            event.preventDefault();
+            $('.cd-popup3').addClass('is-visible3');
+            //$(".dialog-addquxiao").hide()
+        });
+        //关闭窗口
+        $('.cd-popup3').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close')  || $(event.target).is('.cd-popup3') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible3');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup3').removeClass('is-visible3');
+            }
+        });
+    });
+	
+</script>
+<ul class="xzanli">
+<li>
+<div class="anliz"><img src="images/llogo.jpg"/><span>卓越置业集团有限公司</span><p>卓越集团是经国家工商总局核准成立的跨行业、跨地区的外商投资集团公司，业务涉及房地产开发、商业经营、酒店管理、城市更新、物业管理、不动产担保等诸多领域。自1996年成立以来，历经18年长足发展，卓越集团已成长为立足深圳、布局中国，在行业内具有领先地位的大型商业及住宅综合性地产开发运营商。2013年，卓越集团以153.1亿元位列中国房地产企业销售TOP50榜第46位，业务遍布全国14大城市，总资产超过600亿元，已开发房地产面积1100万平方米，土地储备面积3000万平方米。</p></div>
+<div class="anliy"><p>人力资源部</p><span>简课系统操作简单、实用、大写赞</span></div>
+</li>
+<li>
+<div class="anliz"><img src="images/llogo.jpg"/><span>卓越置业集团有限公司</span><p>卓越集团是经国家工商总局核准成立的跨行业、跨地区的外商投资集团公司，业务涉及房地产开发、商业经营、酒店管理、城市更新、物业管理、不动产担保等诸多领域。自1996年成立以来，历经18年长足发展，卓越集团已成长为立足深圳、布局中国，在行业内具有领先地位的大型商业及住宅综合性地产开发运营商。2013年，卓越集团以153.1亿元位列中国房地产企业销售TOP50榜第46位，业务遍布全国14大城市，总资产超过600亿元，已开发房地产面积1100万平方米，土地储备面积3000万平方米。</p></div>
+<div class="anliy"><p>人力资源部</p><span>简课系统操作简单、实用、大写赞</span></div>
+</li>
+<li>
+<div class="anliz"><img src="images/llogo.jpg"/><span>卓越置业集团有限公司</span><p>卓越集团是经国家工商总局核准成立的跨行业、跨地区的外商投资集团公司，业务涉及房地产开发、商业经营、酒店管理、城市更新、物业管理、不动产担保等诸多领域。自1996年成立以来，历经18年长足发展，卓越集团已成长为立足深圳、布局中国，在行业内具有领先地位的大型商业及住宅综合性地产开发运营商。2013年，卓越集团以153.1亿元位列中国房地产企业销售TOP50榜第46位，业务遍布全国14大城市，总资产超过600亿元，已开发房地产面积1100万平方米，土地储备面积3000万平方米。</p></div>
+<div class="anliy"><p>人力资源部</p><span>简课系统操作简单、实用、大写赞</span></div>
+</li>
+<li>
+<div class="anliz"><img src="images/llogo.jpg"/><span>卓越置业集团有限公司</span><p>卓越集团是经国家工商总局核准成立的跨行业、跨地区的外商投资集团公司，业务涉及房地产开发、商业经营、酒店管理、城市更新、物业管理、不动产担保等诸多领域。自1996年成立以来，历经18年长足发展，卓越集团已成长为立足深圳、布局中国，在行业内具有领先地位的大型商业及住宅综合性地产开发运营商。2013年，卓越集团以153.1亿元位列中国房地产企业销售TOP50榜第46位，业务遍布全国14大城市，总资产超过600亿元，已开发房地产面积1100万平方米，土地储备面积3000万平方米。</p></div>
+<div class="anliy"><p>人力资源部</p><span>简课系统操作简单、实用、大写赞</span></div>
+</li>
+</ul>
+
+	
+	<a class="jiazai">加载更多</a>
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

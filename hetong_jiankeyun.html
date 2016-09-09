@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同管理</title>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/list.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+  <nav class="leftsidebar_box">
+    <dl class="nav_qiy navhover">
+      <dt>企业账号管理<img src="images/nav_s.png"></dt>
+      <dd class="first_dd"><a href="guanliqiyezhanghao.html" target="_parent"> 管理企业账号</a></dd>
+      <dd><a href="guanliqiyekaifazhanghao.html" target="_parent">管理企业开发账号</a></dd>
+      <dd><a href="hetong_jiankeyun.html" target="_parent">合同管理</a></dd>
+      <dd><a href="goumai_jiankeyunkechengpingtai.html" target="_parent">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_pingt ">
+      <dt>平台数据与设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="pingtaikechengbaobiao.html" target="_parent">平台课程报表</a></dd>
+      <dd><a href="xuexihuodongbaobiao.html" target="_parent">学习活动报表</a></dd>
+      <dd><a href="mubanshiyongpinlv.html" target="_parent">模板使用频率</a></dd>
+      <dd><a href="pingtaiquanxianshezhi.html" target="_parent">平台权限设置</a></dd>
+	  <dd><a href="xuexineirongleixingshezhi.html" target="_parent">学习内容类型设置</a></dd>
+      <dd><a href="shiyongzhanghaoquanxianshezhi.html" target="_parent">试用账号权限设置</a></dd>
+    </dl>
+	<dl class="nav_mub">
+      <dt>模板管理<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="zhishiditumuban.html" target="_parent"> 知识地图模板</a></dd>
+      <dd><a href="xuexihuodongmuban.html" target="_parent">学习活动模板</a></dd>
+      <dd><a href="neirongyanshiwendang.html" target="_parent">演示文档模板</a></dd>
+      <dd><a href="jiangshishouce.html" target="_parent">教学手册模板</a></dd>
+	  </dl>
+	<dl class="nav_tongz">
+      <dt>通知与公告<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="chakantongzhi.html" target="_parent">查看通知/公告 </a></dd>
+      <dd><a href="fabutongzhi.html" target="_parent" target="_parent">发布通知/公告</a></dd>
+    </dl>
+	<dl class="nav_xuanc">
+      <dt>宣传网站设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="yingyonganlishezhi.html" target="_parent">应用案例设置</a></dd>
+    </dl>
+	<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".leftsidebar_box dt").css({"background-color":"hite"});
+	$(".navhover dt img").attr("src","images/nav_x.jpg");
+	
+	$(".leftsidebar_box dd").hide();
+	$(".navhover dt").addClass("menu_ac");
+	$(".navhover dd").show();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").removeClass("menu_ac");
+		$(this).addClass("menu_ac");
+		$(".navhover dd").hide();
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+		$(this).parent().find('img').attr("src","images/nav_x.jpg");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+  </nav>
+  <article class="a_zhu">
+	<div class="a_xinzengcght"><a href="hetong_jiankeyun.html" class="a_active">简课云课程平台</a><a href="hetong_siyouyun.html">私有云课程平台</a><a href="hetong_qiye.html">企业内部课程平台</a><div><input placeholder="   请输入搜索名称   "/><input placeholder="   日期   "  class="iriqi"/>&nbsp;-&nbsp;<input placeholder="   日期   " class="iriqi"/><button>查询</button></div></div>
+	<div class="a_xinzengcghtq"><a href="hetong_jisuan1.html" class="ahover ">+新增采购合同</a></div>
+
+
+	<table class="a_xinzenght">
+		
+		<thead>
+			<tr><th>合同<br>编号</th><th>生成<br>日期</th><th>甲方企业<br>名称</th><th> 合同金额</th><th>优惠后合<br>同金额</th><th>新增开发账号 <br></th><th>合同寄出<br>日期 </th><th> 合同回款<br>是否到账</th><th> 汇款账户<br>日期</th><th> 客服<br>人员</th><th> 状态</th><th> 操作</th></tr>
+			</thead>
+		<tbody>
+			<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse cd-popup-trigger2"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span class="cd-popup-trigger3">维护 </span>   <span>发票</span></td></tr>
+		
+			</tbody>
+	</table>
+	<!--弹框-->
+
+	<div class="cd-popup3">
+    <div class="cd-popup-container3">
+        <div class="contou">新增企业账户 <a href="#0" class="cd-popup-close"></a></div>
+        
+            <ul class="hetj">
+				<li>  企业名称：<input placeholder="深圳某某有限公司"></li>
+				<li> 合同寄出日期：<input placeholder="2016-08-08"></li>
+				<li>客户是否收到合同：<form action=""><select name="cars" class="bord1"><option value="是">&nbsp;&nbsp;&nbsp;&nbsp;是</option><option value="否">&nbsp;&nbsp;&nbsp;&nbsp;否</option></select></form></li>
+				<li>合同回款是否到账： <form action=""><select name="cars" class="bord1"><option value="是">&nbsp;&nbsp;&nbsp;&nbsp;是</option><option value="否">&nbsp;&nbsp;&nbsp;&nbsp;否</option></select></form></li>
+				<li>回款到账日期：<input placeholder="2016-08-08"></li>
+			</ul>
+        
+        <div class="quexiao"><a href="#0" class="close">确认</a><a href="#0" class="close quxiao">取消</a></div>
+    </div>
+	
+</div>
+<div class="cd-popup2">
+   <div class="cd-popup-container2" style="
+    height: 400px;
+">
+        <div class="contou">修改合同金额 <a href="#0" class="cd-popup-close"></a></div>
+         <p style="
+    margin-top: 100px;
+    line-height: 50px;
+">合同金额：<span style="
+    display: inline-block;
+    margin-left: 20px;
+">100000</span></p>
+		<p style="
+    text-align: right;
+    line-height: 50px;
+">优惠后的金额：<input placeholder="2016-08-08" style="
+    margin: 0;
+    float: none;
+    margin-left: 20px;
+    margin-right: 130px;
+"></p>
+           
+        
+        <div class="quexiao"><a href="#0" class="close">编辑</a><a href="#0" class="close quxiao">返回</a></div>
+    </div>
+	
+</div>
+	<script type="text/javascript">
+     /*弹框JS内容*/
+    jQuery(document).ready(function($){
+        //打开窗口
+        $('.cd-popup-trigger0').on('click', function(event){
+            event.preventDefault();
+            $('.cd-popup').addClass('is-visible');
+            //$(".dialog-addquxiao").hide()
+        });
+        //关闭窗口
+        $('.cd-popup').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup').removeClass('is-visible');
+            }
+        });
+		//打开窗口
+        $('.cd-popup-trigger1').on('click', function(event){
+            event.preventDefault();
+            $('.cd-popup1').addClass('is-visible1');
+            //$(".dialog-addquxiao").hide()
+        });
+        //关闭窗口
+        $('.cd-popup1').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup1') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible1');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup1').removeClass('is-visible1');
+            }
+        });
+		//打开窗口
+        $('.cd-popup-trigger2').on('click', function(event){
+            event.preventDefault();
+            $('.cd-popup2').addClass('is-visible2');
+            //$(".dialog-addquxiao").hide()
+        });
+        //关闭窗口
+        $('.cd-popup2').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup2') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible2');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup2').removeClass('is-visible2');
+            }
+        });
+		//打开窗口
+        $('.cd-popup-trigger3').on('click', function(event){
+            event.preventDefault();
+            $('.cd-popup3').addClass('is-visible3');
+            //$(".dialog-addquxiao").hide()
+        });
+        //关闭窗口
+        $('.cd-popup3').on('click', function(event){
+            if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup3') ) {
+                event.preventDefault();
+                $(this).removeClass('is-visible3');
+            }
+        });
+        //ESC关闭
+        $(document).keyup(function(event){
+            if(event.which=='27'){
+                $('.cd-popup3').removeClass('is-visible3');
+            }
+        });
+    });
+
+</script>
+	<div class="a_fenye">
+		<a href="javascript::">上一页</a>
+		<a href="javascript::">1</a>
+		<a href="javascript::">2</a>
+		<a href="javascript::">3</a>
+		<a href="javascript::">4</a>
+		<a href="javascript::">5</a>
+		<a href="javascript::">6</a>
+		<a href="javascript::">下一页</a>
+		<a href="javascript::">共122页</a>
+		<a href="javascript::">跳&nbsp;<input >&nbsp;页</a>
+		<a href="javascript::">确定</a>
+	<div>
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

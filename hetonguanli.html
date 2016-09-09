@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同管理</title>
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+  <nav class="leftsidebar_box">
+    <dl class="nav_qiy">
+      <dt>企业账号管理<img src="images/nav_x.png"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_pingt">
+      <dt>平台数据与设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_mub">
+      <dt>模板管理<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_tongz">
+      <dt>通知与公告<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<dl class="nav_xuanc">
+      <dt>宣传网站设置<img src="images/nav_s.jpg"></dt>
+      <dd class="first_dd"><a href="#">管理企业账号</a></dd>
+      <dd><a href="#">管理企业开发账号</a></dd>
+      <dd><a href="#">合同管理</a></dd>
+      <dd><a href="#">购买和续费计算公式</a></dd>
+    </dl>
+	<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".leftsidebar_box dt").css({"background-color":"hite"});
+	$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+	$(".leftsidebar_box dd").hide();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").removeClass("menu_ac");
+		$(this).addClass("menu_ac");
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+		$(this).parent().find('img').attr("src","images/nav_x.jpg");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+  </nav>
+  <article class="a_zhu">
+	<div class="a_xinzengcght"><div><input placeholder="   请输入搜索名称   "/><input placeholder="   日期   "  class="iriqi"/>&nbsp;-&nbsp;<input placeholder="   日期   " class="iriqi"/><button>查询</button></div></div>
+	<div class="a_guanliqykfzha"><a href="#" class="ahover">新增采购合同</a></div>
+	<table class="a_xinzenght">
+		
+		<thead>
+			<tr><th>合同<br>编号</th><th>生成<br>日期</th><th>甲方企业<br>名称</th><th> 合同金额</th><th>优惠后合<br>同金额</th><th>新增开发账号 <br></th><th>合同寄出<br>日期 </th><th> 合同回款<br>是否到账</th><th> 汇款账户<br>日期</th><th> 客服<br>人员</th><th> 状态</th><th> 操作</th></tr>
+			</thead>
+		<tbody>
+			<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		<tr><td>1</td><td>2016:08:08</td><td>GGGGG </td><td> 2000.00 </td><td class="yanse"> 2000 </td><td>3 </td><td>2016:08:08</td><td>是</td><td>2016:08:08</td><td>张某某</td><td  class="yanse">已确认</td><td  class="yanse"><span>预览 </span>   <span>维护 </span>  <span>发票</span></td></tr>
+		
+			</tbody>
+	</table>
+	<div class="a_fenye">
+		<a href="javascript::">上一页</a>
+		<a href="javascript::">1</a>
+		<a href="javascript::">2</a>
+		<a href="javascript::">3</a>
+		<a href="javascript::">4</a>
+		<a href="javascript::">5</a>
+		<a href="javascript::">6</a>
+		<a href="javascript::">下一页</a>
+		<a href="javascript::">共122页</a>
+		<a href="javascript::">跳&nbsp;<input >&nbsp;页</a>
+		<a href="javascript::">确定</a>
+	<div>
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

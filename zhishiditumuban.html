@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同管理</title>
+<link href="css/index.css" rel="stylesheet">
+<link href="css/list.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	jQuery.jqtab = function(tabtit,tab_conbox,shijian) {
+		$(tab_conbox).hide();
+		$("dl").show();
+		$(tabtit).find("li").show();
+		$(tabtit).find("dt").show();
+		$(tab_conbox).find("li:last").show();
+		$(tab_conbox).find("dt:last").show();
+	    $(tab_conbox .close).click(function(){});
+		$(tabtit).find("li").bind(shijian,function(){
+		$(tab_conbox).show();
+		  $(this).addClass("thistab").siblings("li").removeClass("thistab"); 
+		  
+			var activeindex = $(tabtit).find("li").index(this);
+			$(tab_conbox).children().eq(activeindex).show().siblings().hide();
+			return false;
+		});
+		$(tabtit).find("dt").bind(shijian,function(){
+		$(tab_conbox).show();
+		  $(this).addClass("thistab").siblings("dt").removeClass("thistab"); 
+		  
+			var activeindex = $(tabtit).find("dt").index(this);
+			$(tab_conbox).children().eq(activeindex).show().siblings().hide();
+			return false;
+		});
+	};
+	/*调用方法如下：*/
+	$.jqtab("#tabs","#tab_conbox","click");
+	$.jqtab("#tabs3","#tab_conbox3","click");
+	$(".clase").click(function(){
+	
+    $(this).parentsUntil("ul").hide();
+});
+});
+</script>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+  <iframe src="nav.html" width="197" height="600" frameborder="0"></iframe>
+  <article class="a_zhu">
+	
+<a class="tianjmb" href="mubanbianji.html">+</a>
+<div id="tabbox">
+	<ul class="tabs tabs1" id="tabs">
+       <li><a href="#"><img src="images/mu1.jpg"/ style="visibility:hidden;"></a></li>
+       <li><a href="#"><img src="images/mu1.jpg"/></a></li>
+       <li><a href="#"><img src="images/mu1.jpg"/></a></li>
+    </ul>
+    <ul class="tab_conbox" id="tab_conbox">
+        <li class="tab_con tab_con1">
+          
+        </li>
+		 <li class="tab_con tab_con1" style="text-align:center">
+           <a class="clase " ></a>
+		    
+				<img src="images/mu3.jpg"/>
+			 
+			<div class="bians">
+			<a class="anniu" href="mubanbianji.html">编辑该模板</a><a class="anniu">删除该模板</a></div>
+        </li>
+		 <li class="tab_con tab_con1" style="text-align:center">
+           <a class="clase "></a>
+		    
+				<img src="images/mu3.jpg"/>
+			 
+			<div class="bians">
+			<a class="anniu" href="mubanbianji.html">编辑该模板</a><a class="anniu">删除该模板</a></div>
+        </li>
+         </ul>
+	</div>
+	<div id="tabbox">
+	<ul class="tabs tabs1" id="tabs3">
+       <li><a href="#"><img src="images/mu1.jpg"/ ></a></li>
+       <li><a href="#"><img src="images/mu1.jpg"/></a></li>
+       <li><a href="#"><img src="images/mu1.jpg"/></a></li>
+    </ul>
+    <ul class="tab_conbox" id="tab_conbox3">
+       
+		 <li class="tab_con tab_con1" style="text-align:center">
+           <a class="clase " ></a>
+		    
+				<img src="images/mu3.jpg"/>
+			 
+			<div class="bians">
+			<a class="anniu" href="mubanbianji.html">编辑该模板</a><a class="anniu">删除该模板</a></div>
+        </li>
+		 <li class="tab_con tab_con1" style="text-align:center">
+           <a class="clase " ></a>
+		    
+				<img src="images/mu3.jpg"/>
+			 
+			<div class="bians">
+			<a class="anniu" href="mubanbianji.html">编辑该模板</a><a class="anniu">删除该模板</a></div>
+        </li>
+		 <li class="tab_con tab_con1" style="text-align:center">
+           <a class="clase "></a>
+		    
+				<img src="images/mu3.jpg"/>
+			 
+			<div class="bians">
+			<a class="anniu" href="mubanbianji.html">编辑该模板</a><a class="anniu">删除该模板</a></div>
+        </li>
+         </ul>
+	</div>
+		   
+        
+	<a class="jiazai">加载更多</a>
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>

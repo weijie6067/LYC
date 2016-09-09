@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>合同管理</title>
+<link href="css/index.css" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header">
+    <div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+  </header>
+  <section class="container">
+    <nav class="leftsidebar_box">
+      <dl class="nav_qiy navhover">
+        <dt>企业账号管理<img src="images/nav_s.jpg"></dt>
+        <dd class="first_dd"><a href="guanliqiyezhanghao.html" target="_parent"> 管理企业账号</a></dd>
+        <dd><a href="guanliqiyekaifazhanghao.html" target="_parent">管理企业开发账号</a></dd>
+        <dd><a href="hetong_jiankeyun.html" target="_parent">合同管理</a></dd>
+        <dd><a href="goumai_jiankeyunkechengpingtai.html" target="_parent">购买和续费计算公式</a></dd>
+      </dl>
+    	<dl class="nav_pingt">
+        <dt>平台数据与设置<img src="images/nav_s.jpg"></dt>
+        <dd class="first_dd"><a href="pingtaikechengbaobiao.html" target="_parent">平台课程报表</a></dd>
+        <dd><a href="xuexihuodongbaobiao.html" target="_parent">学习活动报表</a></dd>
+        <dd><a href="mubanshiyongpinlv.html" target="_parent">模板使用频率</a></dd>
+        <dd><a href="pingtaiquanxianshezhi.html" target="_parent">平台权限设置</a></dd>
+  	    <dd><a href="xuexineirongleixingshezhi.html" target="_parent">学习内容类型设置</a></dd>
+        <dd><a href="shiyongzhanghaoquanxianshezhi.html" target="_parent">试用账号权限设置</a></dd>
+      </dl>
+    	<dl class="nav_mub">
+        <dt>模板管理<img src="images/nav_s.jpg"></dt>
+        <dd class="first_dd"><a href="zhishiditumuban.html" target="_parent"> 知识地图模板</a></dd>
+        <dd><a href="xuexihuodongmuban.html" target="_parent">学习活动模板</a></dd>
+        <dd><a href="neirongyanshiwendang.html" target="_parent">演示文档模板</a></dd>
+        <dd><a href="jiangshishouce.html" target="_parent">教学手册模板</a></dd>
+  	  </dl>
+    	<dl class="nav_tongz">
+        <dt>通知与公告<img src="images/nav_s.jpg"></dt>
+        <dd class="first_dd"><a href="chakantongzhi.html" target="_parent">查看通知/公告 </a></dd>
+        <dd><a href="fabutongzhi.html" target="_parent" target="_parent">发布通知/公告</a></dd>
+      </dl>
+    	<dl class="nav_xuanc">
+          <dt>宣传网站设置<img src="images/nav_s.jpg"></dt>
+          <dd class="first_dd"><a href="yingyonganlishezhi.html" target="_parent">应用案例设置</a></dd>
+      </dl>
+     </nav>
+     <article class="a_zhu">
+       <iframe id="iframepage" src="chakantongzhi.html" width="100%" frameborder="0" scrolling="yes"></iframe>
+     </article>
+    </section>
+    <footer class="footer">
+    <div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+    </footer>
+   
+	<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".leftsidebar_box dt").css({"background-color":"hite"});
+	$(".navhover dt img").attr("src","images/nav_x.jpg");
+	
+	$(".leftsidebar_box dd").hide();
+	$(".navhover dt").addClass("menu_ac");
+	$(".navhover dd").show();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").removeClass("menu_ac");
+		$(this).addClass("menu_ac");
+		$(".navhover dd").hide();
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/nav_s.jpg");
+		$(this).parent().find('img').attr("src","images/nav_x.jpg");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+
+})
+
+$('#iframepage').load(function() { //方法2  
+    var iframeHeight=$(this).contents().height();  
+    $(this).height(iframeHeight+'px');  
+    console.log(iframeHeight) 
+}); 
+$(function(){
+  var p = $('#iframepage').contents().find('#p').text();
+  var mainheight = $(this).contents().find("#content_vote").height()+30;
+  var iframeHeight = $("#iframeId").contents().find("body").height();
+}) 
+
+</script>
+ 
+  </body>
+</html>
+

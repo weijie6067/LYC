@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企业账号管理</title>
+<link href="css/index.css" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="shu/css/demo.css" type="text/css">
+	<link rel="stylesheet" href="css/list.css" type="text/css">
+	<link rel="stylesheet" href="shu/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="shu/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="shu/js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="shu/js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="shu/js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript">
+		
+		var setting = {
+			view: {
+				dblClickExpand: false
+			},
+			check: {
+				enable: true
+			},
+			callback: {
+				onRightClick: OnRightClick
+			}
+		};
+
+		var zNodes =[
+			{id:1, name:"企业账号管理", open:true, noR:true,
+				children:[
+							{id:11, name:"管理企业账号", open:true, noR:true,
+								children:[
+											{id:1, name:"审批企业账号",open:true,  noR:true}
+											
+										]},
+							{id:12, name:"管理企业开发账号", open:true, noR:true,
+								children:[
+											{id:21, name:"管理企业开发账号",open:true,  noR:true},
+											{id:22, name:"分配企业账号",open:true,  noR:true},
+											{id:23, name:"分配企业账号", open:true, noR:true}
+											
+										]},
+							{id:13, name:"平台数据与设置", open:true, noR:true,
+								children:[
+											{id:31, name:"平台课程报表",open:true,  noR:true}
+											
+										]},
+							{id:14, name:"模块管理", open:true, noR:true,
+								children:[
+											{id:41, name:"知识地图模块", open:true, noR:true}
+											
+										]},
+							{id:15, name:"通知与公共", open:true, noR:true}
+								
+								
+							]}
+							
+			
+  	 	];
+
+		function OnRightClick(event, treeId, treeNode) {
+			if (!treeNode && event.target.tagName.toLowerCase() != "button" && $(event.target).parents("a").length == 0) {
+				zTree.cancelSelectedNode();
+				showRMenu("root", event.clientX, event.clientY);
+			} else if (treeNode && !treeNode.noR) {
+				zTree.selectNode(treeNode);
+				showRMenu("node", event.clientX, event.clientY);
+			}
+		}
+
+		function showRMenu(type, x, y) {
+			$("#rMenu ul").show();
+			if (type=="root") {
+				$("#m_del").hide();
+				$("#m_check").hide();
+				$("#m_unCheck").hide();
+			} else {
+				$("#m_del").show();
+				$("#m_check").show();
+				$("#m_unCheck").show();
+			}
+			rMenu.css({"top":y+"px", "left":x+"px", "visibility":"visible"});
+
+			$("body").bind("mousedown", onBodyMouseDown);
+		}
+		function hideRMenu() {
+			if (rMenu) rMenu.css({"visibility": "hidden"});
+			$("body").unbind("mousedown", onBodyMouseDown);
+		}
+		function onBodyMouseDown(event){
+			if (!(event.target.id == "rMenu" || $(event.target).parents("#rMenu").length>0)) {
+				rMenu.css({"visibility" : "hidden"});
+			}
+		}
+		var addCount = 1;
+		function addTreeNode() {
+			hideRMenu();
+			var newNode = { name:"增加" + (addCount++)};
+			if (zTree.getSelectedNodes()[0]) {
+				newNode.checked = zTree.getSelectedNodes()[0].checked;
+				zTree.addNodes(zTree.getSelectedNodes()[0], newNode);
+			} else {
+				zTree.addNodes(null, newNode);
+			}
+		}
+		function removeTreeNode() {
+			hideRMenu();
+			var nodes = zTree.getSelectedNodes();
+			if (nodes && nodes.length>0) {
+				if (nodes[0].children && nodes[0].children.length > 0) {
+					var msg = "要删除的节点是父节点，如果删除将连同子节点一起删掉。\n\n请确认！";
+					if (confirm(msg)==true){
+						zTree.removeNode(nodes[0]);
+					}
+				} else {
+					zTree.removeNode(nodes[0]);
+				}
+			}
+		}
+		function checkTreeNode(checked) {
+			var nodes = zTree.getSelectedNodes();
+			if (nodes && nodes.length>0) {
+				zTree.checkNode(nodes[0], checked, true);
+			}
+			hideRMenu();
+		}
+		function resetTree() {
+			hideRMenu();
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeDemo1"), setting, zNodes);
+			$.fn.zTree.init($("#treeDemo2"), setting, zNodes);
+		}
+
+		var zTree, rMenu;
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			$.fn.zTree.init($("#treeDemo1"), setting, zNodes);
+			zTree = $.fn.zTree.getZTreeObj("treeDemo1");
+			$.fn.zTree.init($("#treeDemo2"), setting, zNodes);
+			zTree = $.fn.zTree.getZTreeObj("treeDemo2");
+			
+			rMenu = $("#rMenu");
+		});
+		
+	</script>
+	<style type="text/css">
+div#rMenu {position:absolute; visibility:hidden; top:0; background-color: #555;text-align: left;padding: 2px;}
+div#rMenu ul li{
+	margin: 1px 0;
+	padding: 0 5px;
+	cursor: pointer;
+	list-style: none outside none;
+	background-color: #DFDFDF;
+}
+	</style>
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<header class="header">
+	<div><img src="images/logo.jpg"/> <p>运营管理平台</p><span>消息</span><span>张明阳</span></div>
+</header>
+<section class="container">
+
+  <article class="a_zhu">
+	
+	<div class="mubj">
+	<a class="fanhui">返回</a>
+	<div>
+		<img src="images/mu3.jpg"/>
+	</div>
+	<ul id="treeDemo2" class="ztree mubj1"></ul>
+	</div>
+	
+  </article>
+</section>
+
+<!-- 代码部分end -->
+<footer class="footer">
+<div><p>2016©All Rights Reerved. Privacy Policy|Terms of Service</p><a href="javascript::"><img src="images/footer4.jpg"/></a><a href="javascript::"><img src="images/footer3.jpg"/></a><a href="javascript::"><img src="images/footer2.jpg"/></a><a  href="javascript::"><img src="images/footer1.jpg"/></a></div>
+</footer>
+</body>
+</html>
